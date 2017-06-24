@@ -42,6 +42,10 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem "rails-i18n"
+  gem "devise-i18n"
+  gem "select2-rails"
+  gem "simple_form"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
