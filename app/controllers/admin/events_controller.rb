@@ -1,7 +1,7 @@
 class Admin::EventsController < AdminController
 
   def index
-    @events = Event.all
+    @events = Event.rank(:row_order).all
   end
 
   def show
@@ -37,6 +37,17 @@ class Admin::EventsController < AdminController
       render "edit"
     end
   end
+
+  def reorder
+     @event = Event.find_by_friendly_id!(params[:id])
+     @event.row_order_position = params[:position]
+     @event.save!
+
+     respond_to do |format|
+      format.html { redirect_to admin_events_path }
+      format.json { render :json => { :message => "ok" }}
+    end
+   end
 
   def bulk_update
     total = 0

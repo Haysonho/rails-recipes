@@ -49,6 +49,8 @@ group :development, :test do
   gem "nested_form_fields"
   gem 'bootstrap-datepicker-rails'
   gem 'ckeditor'
+  gem 'ranked-model'
+  gem 'jquery-ui-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
