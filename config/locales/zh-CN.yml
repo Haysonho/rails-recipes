@@ -1,4 +1,8 @@
 "zh-CN":
+  registration:
+     status:
+       pending: 报名尚未完成
+       confirmed: 报名成功
   hello: "亲～ %{name} 你好："
   event_list: 活动列表
   bulk_update: 批次编辑
